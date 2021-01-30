@@ -1,13 +1,28 @@
-function missingNum(arr) {
-  //Write your code in here. You should return the missing the number below.
-  return 0;
-}
+// let arr = [1, 2, 3, 5, 4, 6, 8, 9];
 
-/**                            */
-/**                            */
-/** DO NOT EDIT BELOW THIS LINE*/
-/**                            */
-/**                            */
+// arr.sort();
+// // console.log(arr);
+// function missingNum(arrOriginal, arr) {
+//   //Write your code in here. You should return the missing the number below.
+//   arrOriginal.map((number) => {
+//     // console.log(arr.indexOf(number));
+//     if (arr.indexOf(number) === -1) {
+//       console.log(number);
+//       return number;
+//     }
+//   });
+// }
+function missingNum(arr) {
+  let arrOriginal = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  let missingNumber;
+  arr.sort();
+  arrOriginal.map((number) => {
+    if (arr.indexOf(number) === -1) {
+      missingNumber = number;
+    }
+  });
+  return missingNumber;
+}
 
 const util = require("util");
 
